@@ -50,16 +50,22 @@ Short repetition of the properties of primes which we already know and we will u
 
 \textbf{In the following work we will always ignore the prime 2!} \\
 
-$\Rightarrow$ Hence for all primes $p \in \mathbb{P} \setminus \{2\}$ we know that we are able to write them as $p_{n} := 2n + 1$, $n \in \mathbb{N}_{0}$. Q: For which $n$ we receive primes? \\
+$\Rightarrow$ Hence, for all primes $p \in \mathbb{P} \setminus \{2\}$ we know that we are able to write them as $p_{n} := 2n + 1$, $n \in \mathbb{N}_{0}$. Q: For which $n$ we receive primes? \\
 
-Now if we look at the set of all odd integer divisible numbers $N_{n,m} \in \mathbb{N}$. We recognise
+Now if we look at the set of all odd integer divisible numbers $N_{n} \in \mathbb{N}$. We recognise
 \begin{equation}\begin{split}
-	N_{n,m} & = \left(2n + 1\right)\left(2m + 1\right) \\
-	& = 4nm + 2n + 2m + 1 \\
-	& = 2\left(2nm + n + m\right) + 1,
+	N_{nn\prime} & := \left(2n + 1\right)\left(2n\prime + 1\right) \\
+	& = 4nn\prime + 2n + 2n\prime + 1 \\
+	& = 2\left(2nn\prime + n + n\prime\right) + 1,
 \end{split}\label{eq:intdivnumbN}\end{equation} 
-$\forall n,m \in \mathbb{N}_{0}$.
-
+$\forall n,n\prime \in \mathbb{N}_{0}$. Since the case $a \cdot 1 = 1 \cdot a = a$ isn't interesting for use we will change our domain of definition from $n,n\prime \in \mathbb{N}_{0}$ to $n,n\prime \in \mathbb{N}$. \\
+Additionally we will see that it make sense to expand $p_{n}$ to $p_{z}$ with the set $\mathbb{Z}$. In this case we will write
+\begin{equation}\begin{split}
+	Z_{z,z\prime} & := \left(2z + 1\right)\left(2z\prime + 1\right) \\
+	& = 4zz\prime + 2z + 2z\prime + 1 \\
+	& = 2\left(2zz\prime + z + z\prime\right) + 1,
+\end{split}\label{eq:intdivnumbZ}\end{equation}
+$\forall z,z\prime \in \mathbb{Z}$. Here we are also not interested in the cases $a \cdot 1 = 1 \cdot a = a$ and $a \cdot \left(-1\right) = \left(-1\right) \cdot a = -a$. So we use $z,z\prime \in \mathbb{Z} \setminus \{-1, 0\}$.
 
 
 
