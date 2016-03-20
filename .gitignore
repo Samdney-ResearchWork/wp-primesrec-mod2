@@ -1,0 +1,9 @@
+*.log
+*.aux
+*.toc
+*.out
+*.blg
+*.bbl
+*preamble.tex
+makepdf
+references/
