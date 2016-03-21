@@ -52,20 +52,43 @@ Short repetition of the properties of primes which we already know and we will u
 
 $\Rightarrow$ Hence, for all primes $p \in \mathbb{P} \setminus \{2\}$ we know that we are able to write them as $p_{n} := 2n + 1$, $n \in \mathbb{N}_{0}$. Q: For which $n$ we receive primes? \\
 
-Now if we look at the set of all odd integer divisible numbers $N_{n} \in \mathbb{N}$. We recognise
+Now if we look at the set of all odd integer divisible numbers $p_{nn\prime} \in \mathbb{N}$. We recognise
 \begin{equation}\begin{split}
-	N_{nn\prime} & := \left(2n + 1\right)\left(2n\prime + 1\right) \\
+	p_{nn\prime} & := \left(2n + 1\right)\left(2n\prime + 1\right) \\
 	& = 4nn\prime + 2n + 2n\prime + 1 \\
-	& = 2\left(2nn\prime + n + n\prime\right) + 1,
+	& = 2\left(\underbrace{2nn\prime + n + n\prime}_{=:N_{n,n\prime}}\right) + 1,
 \end{split}\label{eq:intdivnumbN}\end{equation} 
 $\forall n,n\prime \in \mathbb{N}_{0}$. Since the case $a \cdot 1 = 1 \cdot a = a$ isn't interesting for use we will change our domain of definition from $n,n\prime \in \mathbb{N}_{0}$ to $n,n\prime \in \mathbb{N}$. \\
 Additionally we will see that it make sense to expand $p_{n}$ to $p_{z}$ with the set $\mathbb{Z}$. In this case we will write
 \begin{equation}\begin{split}
-	Z_{z,z\prime} & := \left(2z + 1\right)\left(2z\prime + 1\right) \\
+	p_{z,z\prime} & := \left(2z + 1\right)\left(2z\prime + 1\right) \\
 	& = 4zz\prime + 2z + 2z\prime + 1 \\
-	& = 2\left(2zz\prime + z + z\prime\right) + 1,
+	& = 2\left(\underbrace{2zz\prime + z + z\prime}_{=:Z_{z,z\prime}}\right) + 1,
 \end{split}\label{eq:intdivnumbZ}\end{equation}
 $\forall z,z\prime \in \mathbb{Z}$. Here we are also not interested in the cases $a \cdot 1 = 1 \cdot a = a$ and $a \cdot \left(-1\right) = \left(-1\right) \cdot a = -a$. So we use $z,z\prime \in \mathbb{Z} \setminus \{-1, 0\}$.
+% ----------------------------------------------------------------------
+% Intersection
+\section{Intersection}
+\label{s:intersection}
+% ----------------------------------------------------------------------
+Ok. Now we have an equation to describe all integer divisible numbers of $\mathbb{Z}$. So we also write
+\begin{equation}\begin{split}
+	Z_{z,z\prime} & = 2zz\prime + z + z\prime \\
+	& = \left(2z + 1\right)z\prime + z \\
+	& = \left(2z\prime + 1\right)z + z\prime.	
+\end{split}\label{eq:intdivnumbZ2}\end{equation}
+For example, the second line can be interpreted as the equation which gives us all $Z_{z,z\prime}$ which belongs to numbers which are the product of $\left(2z + 1\right)V$, $V \in \mathbb{Z}$. \\
+We use this to write the following for all numbers which are not integer divisible by $\left(2z + 1\right)$:
+\begin{equation}
+	Z_{z,z\prime} = \left(2z + 1\right)z\prime + z + \chi_{z},
+\label{eq:notintdivZ}\end{equation}
+$\chi_{z} \in [1, \left(2z + 1\right) - 1]$. For the intersection of two of this equations follows
+\begin{equation}\begin{split}
+	0 & = Z_{z_{1},z_{1}\prime} - Z_{z_{2},z_{2}\prime} \\
+	& = \left(2z_{1} + 1\right)z_{1}\prime - \left(2z_{2} + 1\right)z_{2}\prime + \underbrace{z_{1} + \chi_{z_{1}}}_{=:\kappa_{z_{1}}} - \left(\underbrace{z_{2} + \chi_{z_{2}}}_{=:\kappa_{z_{2}}}\right) \\
+	& = \left(2z_{1} + 1\right)z_{1}\prime - \left(2z_{2} + 1\right)z_{2}\prime + \kappa_{z_{1}} - \kappa_{z_{2}}.
+\end{split}\label{eq:intersection}\end{equation}
+
 
 
 
