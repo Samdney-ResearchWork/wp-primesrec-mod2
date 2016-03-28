@@ -84,10 +84,28 @@ We use this to write the following for all numbers which are not integer divisib
 \label{eq:notintdivZ}\end{equation}
 $\chi_{z} \in [1, \left(2z + 1\right) - 1]$. For the intersection of two of this equations follows
 \begin{equation}\begin{split}
-	0 & = Z_{z_{1},z_{1}\prime} - Z_{z_{2},z_{2}\prime} \\
-	& = \left(2z_{1} + 1\right)z_{1}\prime - \left(2z_{2} + 1\right)z_{2}\prime + \underbrace{z_{1} + \chi_{z_{1}}}_{=:\kappa_{z_{1}}} - \left(\underbrace{z_{2} + \chi_{z_{2}}}_{=:\kappa_{z_{2}}}\right) \\
-	& = \left(2z_{1} + 1\right)z_{1}\prime - \left(2z_{2} + 1\right)z_{2}\prime + \kappa_{z_{1}} - \kappa_{z_{2}}.
+	0 & = Z_{z_{i},z_{i}\prime} - Z_{z_{j},z_{j}\prime} \\
+	& = \left(2z_{i} + 1\right)z_{i}\prime - \left(2z_{j} + 1\right)z_{j}\prime + \underbrace{z_{i} + \chi_{z_{i}}}_{=:\kappa_{z_{i}}} - \left(\underbrace{z_{j} + \chi_{z_{j}}}_{=:\kappa_{z_{j}}}\right) \\
+	& = \left(2z_{i} + 1\right)z_{i}\prime - \left(2z_{j} + 1\right)z_{j}\prime + \kappa_{z_{i}} - \kappa_{z_{j}},
 \end{split}\label{eq:intersection}\end{equation}
+$\forall i,j \in \mathbb{N}: i \neq j$.
+% ----------------------------------------------------------------------
+% Solution of intersection equation
+\section{Solution of intersection equation}
+\label{s:solutionofintersection}
+% ----------------------------------------------------------------------
+Assume $\vert\left(2z_{i} + 1\right)\vert < \vert\left(2z_{j} + 1\right)\vert$ and $\left(2z_{i} + 1\right) \perp \left(2z_{j} + 1\right)$. Be $z_{j} = z_{i} + \Delta z_{i,j}:\Delta z_{i,j} \in \mathbb{N}$ we can write
+\begin{equation}\begin{split}
+	0 & = \left(2z_{i} + 1\right)z_{i}\prime - \left(2z_{j} + 1\right)z_{j}\prime + \kappa_{\left(z_{i}, \chi_{z_{i}}\right)} - \kappa_{\left(z_{j}, \chi_{z_{j}}\right)} \\
+	& = \left(2z_{i} + 1\right)\left(z_{i}\prime - z_{j}\prime\right) - 2\Delta z_{j} + \chi_{z_{i}} - \chi_{z_{j}},
+\end{split}\label{eq:intersectionDeltaz}\end{equation}
+with $\chi_{z_{i}} \in [ 1, 2z_{i}]$ and $\chi_{z_{j}} \in [1, 2\left(z_{i} + \Delta z_{i,j}\right)]$. Like in \cite{2014arXiv1411.2824Z} we receive for $z_{j}\prime$
+\begin{equation}
+	z_{j}\prime^{\Delta z_{i,j}} = \left(2z_{i} + 1\right)Y_{j \circ i} - \left(\chi_{z_{i}} - \chi_{z_{j}}\right)z_{i}\prod_{k=2}^{\Delta z_{i,j}} \left(1 + \frac{2}{k}z_{i}\right).
+\label{eq:zjsolution}\end{equation}
+
+
+
 
 
 
