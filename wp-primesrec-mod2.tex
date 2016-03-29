@@ -109,8 +109,28 @@ and in the same way for $z_{i} = z_{j} - \Delta z_{i,j}$ we receive for $z_{i}^{
 \label{eq:zjsolution}\end{equation}
 Finally we can write
 \begin{equation}
-	\prod_{k=2}^{\Delta z_{i,j}} \left(1 + \frac{2}{k}z_{i,j}\right) = \frac{\Gamma\left(2z_{i,j} + \Delta z_{i,j} + 1\right)}{\Gamma\left(\Delta z_{i,j} + 1\right)\Gamma\left(2z_{i,j} + 2\right)}
+	f\left(z_{i,j}, \Delta z_{i,j}\right) := \prod_{k=2}^{\Delta z_{i,j}} \left(1 + \frac{2}{k}z_{i,j}\right) = \frac{\Gamma\left(2z_{i,j} + \Delta z_{i,j} + 1\right)}{\Gamma\left(\Delta z_{i,j} + 1\right)\Gamma\left(2z_{i,j} + 2\right)}
 \label{eq:gammafunczsol}\end{equation}
+Possible ways to rewrite:
+\begin{equation}\begin{split}
+	\frac{1}{B\left(\Delta z_{i,j} + 1, 2z_{i,j} + 2\right)} & = \frac{\Gamma\left(\Delta z_{i,j} + 2z_{i,j} + 3\right)}{\Gamma\left(\Delta z_{i,j} + 1\right)\Gamma\left(2z_{i,j} + 2\right)} \\
+	& = \frac{\left(\Delta z_{i,j} + 2z_{i,j} + 2\right)\left(\Delta z_{i,j} + 2z_{i,j} + 1\right) \Gamma\left(\Delta z_{i,j} + 2z_{i,j} + 1\right)}{\Gamma\left(\Delta z_{i,j} + 1\right)\Gamma\left(2z_{i,j} + 2\right)} \\
+	& = \left(\Delta z_{i,j} + 2z_{i,j} + 2\right)\left(\Delta z_{i,j} + 2z_{i,j} + 1\right) f_{\left(z_{i,j}, \Delta z_{i,j}\right)} \\
+	f\left(z_{i,j}, \Delta z_{i,j}\right) & = \frac{1}{B\left(\Delta z_{i,j} + 1, 2z_{i,j} + 2\right)\left(\Delta z_{i,j} + 2z_{i,j} + 2\right)\left(\Delta z_{i,j} + 2z_{i,j} + 1\right)}
+\end{split}\label{eq:gammafunczsolV1}\end{equation} 
+with the Beta function $B\left(x,y\right)$ and $\Gamma\left(x+1\right) = x\Gamma\left(x\right)$. Properties and approximations for $B\left(x,y\right)$:
+\begin{enumerate}
+	\item $B\left(x,y\right) = B\left(y,x\right)$
+	\item If $x$ and $y$ are large:
+		\[ B(x,y) \approx \sqrt{2\pi} \frac{x^{x - \frac{1}{2}}y^{y - \frac{1}{2}}}{\left(x + y\right)^{x + y - \frac{1}{2}}} \]
+	\item If $x$ large and $y$ fixed:
+		\[ B(x,y) \approx \Gamma\left(y\right) x^{-y} \]
+\label{en:propBetafunction}\end{enumerate}
+
+
+
+
+
 % ----------------------------------------------------------------------
 % ...
 \section{...}
